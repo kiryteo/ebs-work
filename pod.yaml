@@ -1,0 +1,14 @@
+---
+ apiVersion: v1
+ kind: Pod
+ metadata:
+   name: hlt
+   labels:
+     app: web
+ spec:
+   containers:
+     - name: rss-reader
+       image: kiryteo/get:part1
+       ports:
+         - containerPort: 88
+

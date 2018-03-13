@@ -1,0 +1,22 @@
+---
+ apiVersion: extensions/v1beta1
+ kind: Deployment
+ metadata:
+   name: hlt-depl
+ spec:
+   replicas: 2
+   template:
+     metadata:
+       labels:
+         app: web
+     spec:
+       containers:
+         - name: rss-reader
+           image: kiryteo/get:part1
+           ports:
+             - containerPort: 88
+
+
+
+
+
